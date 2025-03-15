@@ -1,0 +1,129 @@
+{
+    "info": {
+        "_postman_id": "your-unique-id",
+        "name": "Video Recommendation API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Fetch Viewed Posts",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Flic-Token",
+                        "value": "{{FLIC_TOKEN}}",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{API_BASE_URL}}/posts/view?page=1&page_size=1000",
+                    "host": ["{{API_BASE_URL}}"],
+                    "path": ["posts", "view"],
+                    "query": [
+                        { "key": "page", "value": "1" },
+                        { "key": "page_size", "value": "1000" }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Fetch Liked Posts",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Flic-Token",
+                        "value": "{{FLIC_TOKEN}}",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{API_BASE_URL}}/posts/like?page=1&page_size=1000",
+                    "host": ["{{API_BASE_URL}}"],
+                    "path": ["posts", "like"],
+                    "query": [
+                        { "key": "page", "value": "1" },
+                        { "key": "page_size", "value": "1000" }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Fetch Inspired Posts",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Flic-Token",
+                        "value": "{{FLIC_TOKEN}}",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{API_BASE_URL}}/posts/inspire?page=1&page_size=1000",
+                    "host": ["{{API_BASE_URL}}"],
+                    "path": ["posts", "inspire"],
+                    "query": [
+                        { "key": "page", "value": "1" },
+                        { "key": "page_size", "value": "1000" }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Fetch Rated Posts",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Flic-Token",
+                        "value": "{{FLIC_TOKEN}}",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{API_BASE_URL}}/posts/rating?page=1&page_size=1000",
+                    "host": ["{{API_BASE_URL}}"],
+                    "path": ["posts", "rating"],
+                    "query": [
+                        { "key": "page", "value": "1" },
+                        { "key": "page_size", "value": "1000" }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Fetch Random Posts",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Flic-Token",
+                        "value": "{{FLIC_TOKEN}}",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{API_BASE_URL}}/posts/summary/get?page=1&page_size=1000",
+                    "host": ["{{API_BASE_URL}}"],
+                    "path": ["posts", "summary", "get"],
+                    "query": [
+                        { "key": "page", "value": "1" },
+                        { "key": "page_size", "value": "1000" }
+                    ]
+                }
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "FLIC_TOKEN",
+            "value": "your-api-token"
+        },
+        {
+            "key": "API_BASE_URL",
+            "value": "https://your-api-url.com"
+        }
+    ]
+}
